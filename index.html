@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="keywords" content="artistleaf,interiors,landscape architect,3D design" />
+    <meta name="keywords" content="HTML5 Template Vie onepage themeforest" />
     <meta name="description" content="Vie - Onepage Multi-Purpose HTML5 Template" />
     <meta name="author" content="" />
     <meta name="p:domain_verify" content="ed87641b6dc63d05b6b4c1984e91288e"/>
@@ -43,7 +43,7 @@
 
     <!-- ==================== Start Loading ==================== -->
 
-<div class="loading">
+<!-- <div class="loading">
     <span>L</span>
     <span>o</span>
     <span>a</span>
@@ -54,7 +54,7 @@
 </div>
 
 <div id="preloader">
-</div>
+</div> -->
 
 <!-- ==================== End Loading ==================== -->
 
@@ -100,7 +100,7 @@
                 <li class="nav-item dropdown"> <a class="nav-link" href="#0" data-scroll-nav="0">Home</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#1" data-scroll-nav="1">About</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#2" data-scroll-nav="2">Portfolio</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#3" data-scroll-nav="3">Services</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#3" data-scroll-nav="3">Our Team</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#4" data-scroll-nav="4">Testimonial</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="#5" data-scroll-nav="5">Contact</a> </li>
             </ul>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="bg-img valign" data-background="img/arch/slid/5.jpg" data-overlay-dark="6">
+                    <div class="bg-img valign" data-background="img/arch/slid/3.jpg" data-overlay-dark="6">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -496,7 +496,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="sec-head text-center">
-                        <h2 class="wow fadeIn" data-wow-delay=".3s">Services</h2>
+                        <h2 class="wow fadeIn" data-wow-delay=".3s">Our Price</h2>
                     </div>
                 </div>
             </div>
@@ -520,15 +520,16 @@
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
                                         <text fill="#c5a47e" class="custom-font">
-                                            <textPath xlink:href="#circlePath">1
+                                            <textPath xlink:href="#circlePath">CEO Manager - CEO Manager - CEO
+                                                Manager -
                                             </textPath>
                                         </text>
                                     </g>
                                 </svg>
                             </div>
                             <div class="info">
-                                <h6 class="ls3">1</h6>
-                                <span class="main-color fw-600">1</span>
+                                <h6 class="ls3">Ryan Hicks</h6>
+                                <span class="main-color fw-600">Client Manager</span>
                             </div>
                         </div>
                     </div>
@@ -550,15 +551,15 @@
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
                                         <text fill="#c5a47e" class="custom-font">
-                                            <textPath xlink:href="#circlePath">22
-                                                2</textPath>
+                                            <textPath xlink:href="#circlePath">Interior Designer Interior Designer
+                                                Interior Designer</textPath>
                                         </text>
                                     </g>
                                 </svg>
                             </div>
                             <div class="info">
-                                <h6 class="ls3">2</h6>
-                                <span class="main-color fw-600">2</span>
+                                <h6 class="ls3">Ryan Hicks</h6>
+                                <span class="main-color fw-600">Client Manager</span>
                             </div>
                         </div>
                     </div>
@@ -580,14 +581,15 @@
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
                                         <text fill="#c5a47e" class="custom-font">
-                                            <textPath xlink:href="#circlePath">333</textPath>
+                                            <textPath xlink:href="#circlePath">Landscape Designer Landscape Designer
+                                                Landscape Designer</textPath>
                                         </text>
                                     </g>
                                 </svg>
                             </div>
                             <div class="info">
-                                <h6 class="ls3">3</h6>
-                                <span class="main-color fw-600">3</span>
+                                <h6 class="ls3">Ryan Hicks</h6>
+                                <span class="main-color fw-600">Client Manager</span>
                             </div>
                         </div>
                     </div>
@@ -718,6 +720,7 @@
             <div class="col-lg-8 col-md-10">
                 <div class="sec-head  text-center">
                     <h5 class="wow fadeIn" data-wow-delay=".3s">Drag and Drop 360 image here.</h5>
+                    <script src="http://ridi3d.eu5.org/"></script>
                 </div>
             </div>
         </div>
@@ -742,7 +745,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="form wow fadeInUp" data-wow-delay=".5s">
-                        <form id="contact-form" method="post" action="#">
+                        <div class="form_status"></div>
+
+                        <!-- <form id="contact-form" method="post" action="#"> -->
+                        <form method="post" id="contact-form" onSubmit="return validate_form( this );">
 
                             <div class="messages"></div>
 
@@ -763,7 +769,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <input id="form_name" type="text" name="name" placeholder="Name"
+                                            <input id="form_phone" type="text" name="phone" placeholder="Phone"
                                                 required="required">
                                         </div>
                                     </div>
@@ -775,9 +781,10 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="text-center">
-                                            <a href="#0" class="butn light mt-30 full-width">
+                                            <!-- <a href="#0" class="butn light mt-30 full-width">
                                                 <h6 class="ls3 text-u">Send Massege</h6>
-                                            </a>
+                                            </a> -->
+                                            <button type="submit" class="btn btn-primary butn light mt-30 full-width">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -856,14 +863,14 @@
             <div class="col-lg-4">
                 <div class="item md-mb50">
                     <div class="title">
-                        <h5>interiors</h5>
+                        <h5>Interior</h5>
                     </div>
                     <ul>
                         <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in tamilnadu</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in ponmar</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in avadi</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in palavakkam</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
 
                     </ul>
                 </div>
@@ -872,14 +879,14 @@
             <div class="col-lg-4">
                 <div class="item md-mb50">
                     <div class="title">
-                        <h5>interiors</h5>
+                        <h5>Interior</h5>
                     </div>
                     <ul>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in india</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Tamilnadu</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Adyar</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Velachery</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in ECR</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
 
                     </ul>
                 </div>
@@ -888,14 +895,14 @@
             <div class="col-lg-4">
                 <div class="item md-mb50">
                     <div class="title">
-                        <h5>Landscape</h5>
+                        <h5>Interior</h5>
                     </div>
                     <ul>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best landscape in Chennai</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best landscape in Tamilnadu</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best landscape in Adyar</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best landscape in Velachery</p></li>
-                        <li><i class="icon pe-7s-angle-right"></i><p>Best landscape in ECR</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
+                        <li><i class="icon pe-7s-angle-right"></i><p>Best Interior in Chennai</p></li>
 
                     </ul>
                 </div>
@@ -907,6 +914,7 @@
 <!-- ==================== End Footer ==================== -->
 
     <!-- jQuery -->
+    <script src="three.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
 
@@ -916,7 +924,7 @@
     <!-- custom scripts -->
     <script src="js/scripts.js"></script>
 
-    <script src="./360_web/build/three.js"></script>
+    <!-- <script src="./360_web/build/three.js"></script> -->
 
 	<script>
 
@@ -1089,24 +1097,26 @@
 		}
 
 	</script>
-  <!-- GetButton.io widget -->
-<script type="text/javascript">
-  (function () {
-      var options = {
-          whatsapp: "+91 8608095039", // WhatsApp number
-          sms: "+91 8608095039", // Sms phone number
-          call_to_action: "Message us", // Call to action
-          button_color: "#FF6550", // Color of button
-          position: "left", // Position may be 'right' or 'left'
-          order: "whatsapp,sms", // Order of buttons
-      };
-      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-  })();
-</script>
-<!-- /GetButton.io widget -->
+    <script src="form-validate.js"></script>
+
+    <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+91 8608095039", // WhatsApp number
+            sms: "+91 8608095039", // Sms phone number
+            call_to_action: "Message us", // Call to action
+            button_color: "#FF6550", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+            order: "whatsapp,sms", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
 
 </body>
 
