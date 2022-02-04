@@ -222,7 +222,7 @@
                 </div>
             </div>
 
-          <!--   <div class="row">
+            <!-- <div class="row">
 
                 <div class="col-lg-6 valign pt-50 ">
                     <div class="content">
@@ -497,7 +497,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="sec-head text-center">
-                        <h2 class="wow fadeIn" data-wow-delay=".3s">Services</h2>
+                        <h2 class="wow fadeIn" data-wow-delay=".3s">Our Price</h2>
                     </div>
                 </div>
             </div>
@@ -511,7 +511,7 @@
                             <div id="circle">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-                                    height="500px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                                    height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
                                     xml:space="preserve">
                                     <defs>
                                         <path id="circlePath"
@@ -521,15 +521,15 @@
                                     <g>
                                         <use xlink:href="#circlePath" fill="none" />
                                         <text fill="#c5a47e" class="custom-font">
-                                            <textPath xlink:href="#circlePath">Landscape Designer Landscape Designer
-                                                Landscape Designer
+                                            <textPath xlink:href="#circlePath">CEO Manager - CEO Manager - CEO
+                                                Manager -
                                             </textPath>
                                         </text>
                                     </g>
                                 </svg>
                             </div>
                             <div class="info">
-                                <h6 class="ls3">Contact For More</h6>
+                                <h6 class="ls3">Ryan Hicks</h6>
                                 <span class="main-color fw-600">Client Manager</span>
                             </div>
                         </div>
@@ -542,7 +542,7 @@
                             <div id="circle">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-                                    height="500px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                                    height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
                                     xml:space="preserve">
                                     <defs>
                                         <path id="circlePath"
@@ -572,7 +572,7 @@
                             <div id="circle">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-                                    height="500px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
+                                    height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
                                     xml:space="preserve">
                                     <defs>
                                         <path id="circlePath"
@@ -721,7 +721,6 @@
             <div class="col-lg-8 col-md-10">
                 <div class="sec-head  text-center">
                     <h5 class="wow fadeIn" data-wow-delay=".3s">Drag and Drop 360 image here.</h5>
-                    <a href="360.html"target="_blank">360</a>
                 </div>
             </div>
         </div>
@@ -910,189 +909,6 @@
 
 <!-- ==================== End Footer ==================== -->
 
-    <!-- jQuery -->
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-
-    <!-- plugins -->
-    <script src="js/plugins.js"></script>
-
-    <!-- custom scripts -->
-    <script src="js/scripts.js"></script>
-
-    <script src="./360_web/build/three.js"></script>
-
-	<script>
-
-		var camera, scene, renderer;
-
-		var isUserInteracting = false,
-			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
-			lon = 0, onMouseDownLon = 0,
-			lat = 0, onMouseDownLat = 0,
-			phi = 0, theta = 0;
-
-		init();
-		animate();
-
-		function init() {
-
-			var container, mesh;
-
-			container = document.getElementById('t60');
-
-			camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
-			camera.target = new THREE.Vector3(0, 0, 0);
-
-			scene = new THREE.Scene();
-
-			var geometry = new THREE.SphereGeometry(500, 60, 40);
-			geometry.scale(- 1, 1, 1);
-
-			var material = new THREE.MeshBasicMaterial({
-				map: new THREE.TextureLoader().load('textures/S-house360.jpg')
-			});
-
-			mesh = new THREE.Mesh(geometry, material);
-
-			scene.add(mesh);
-
-			renderer = new THREE.WebGLRenderer();
-			renderer.setPixelRatio(window.devicePixelRatio);
-			renderer.setSize(window.innerWidth, window.innerHeight);
-			container.appendChild(renderer.domElement);
-
-			document.addEventListener('mousedown', onDocumentMouseDown, false);
-			document.addEventListener('mousemove', onDocumentMouseMove, false);
-			document.addEventListener('mouseup', onDocumentMouseUp, false);
-			document.addEventListener('wheel', onDocumentMouseWheel, false);
-
-			//
-
-			document.addEventListener('dragover', function (event) {
-
-				event.preventDefault();
-				event.dataTransfer.dropEffect = 'copy';
-
-			}, false);
-
-			document.addEventListener('dragenter', function (event) {
-
-				document.body.style.opacity = 0.5;
-
-			}, false);
-
-			document.addEventListener('dragleave', function (event) {
-
-				document.body.style.opacity = 1;
-
-			}, false);
-
-			document.addEventListener('drop', function (event) {
-
-				event.preventDefault();
-
-				var reader = new FileReader();
-				reader.addEventListener('load', function (event) {
-
-					material.map.image.src = event.target.result;
-					material.map.needsUpdate = true;
-
-				}, false);
-				reader.readAsDataURL(event.dataTransfer.files[0]);
-
-				document.body.style.opacity = 1;
-
-			}, false);
-
-			//
-
-			window.addEventListener('resize', onWindowResize, false);
-
-		}
-
-		function onWindowResize() {
-
-			camera.aspect = window.innerWidth / window.innerHeight;
-			camera.updateProjectionMatrix();
-
-			renderer.setSize(window.innerWidth, window.innerHeight);
-
-		}
-
-		function onDocumentMouseDown(event) {
-
-			event.preventDefault();
-
-			isUserInteracting = true;
-
-			onPointerDownPointerX = event.clientX;
-			onPointerDownPointerY = event.clientY;
-
-			onPointerDownLon = lon;
-			onPointerDownLat = lat;
-
-		}
-
-		function onDocumentMouseMove(event) {
-
-			if (isUserInteracting === true) {
-
-				lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon;
-				lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
-
-			}
-
-		}
-
-		function onDocumentMouseUp(event) {
-
-			isUserInteracting = false;
-
-		}
-
-		function onDocumentMouseWheel(event) {
-
-			camera.fov += event.deltaY * 0.05;
-			camera.updateProjectionMatrix();
-
-		}
-
-		function animate() {
-
-			requestAnimationFrame(animate);
-			update();
-
-		}
-
-		function update() {
-
-			if (isUserInteracting === false) {
-
-				lon += 0.1;
-
-			}
-
-			lat = Math.max(- 85, Math.min(85, lat));
-			phi = THREE.Math.degToRad(90 - lat);
-			theta = THREE.Math.degToRad(lon);
-
-			camera.target.x = 500 * Math.sin(phi) * Math.cos(theta);
-			camera.target.y = 500 * Math.cos(phi);
-			camera.target.z = 500 * Math.sin(phi) * Math.sin(theta);
-
-			camera.lookAt(camera.target);
-
-			/*
-			// distortion
-			camera.position.copy( camera.target ).negate();
-			*/
-
-			renderer.render(scene, camera);
-
-		}
-
-	</script>
   <!-- GetButton.io widget -->
 <script type="text/javascript">
     (function () {
